@@ -3,7 +3,6 @@ package com.albi.advent.controller;
 import com.albi.advent.service.AdventServiceImport;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,7 +18,7 @@ import static com.albi.advent.controller.AdventControllerImport.ADVENT_BASE_URL;
 @RequiredArgsConstructor
 public class AdventControllerImport {
 
-    final AdventServiceImport adventServiceImport;
+    private final AdventServiceImport adventServiceImport;
 
     public static final String ADVENT_BASE_URL = "/advent";
 
