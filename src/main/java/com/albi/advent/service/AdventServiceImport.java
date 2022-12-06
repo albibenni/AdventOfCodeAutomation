@@ -33,6 +33,17 @@ public class AdventServiceImport {
             // command-line arg, or read it from a file.
             url = new URL("https://adventofcode.com/2022/day/1/input");
 
+            /*
+            Add:
+            session: 53616c7465645f5fa42d7d28f63c8cf51756637c84cc6bfb6abf78f8f46927a7b0d93935b53acba2d83ba4ad4d13b66aba09321cb404f2a96c10f79d927340f6
+                espires in 2024
+            SESSION_ID_FILE = "session.cookie"
+            SESSION = get_session_id(SESSION_ID_FILE)
+            HEADERS = {
+                "User-Agent": "github.com/tomfran/advent-of-code-setup reddit:u/fran-sch, discord:@tomfran#5786"
+            }
+            COOKIES = {"session": SESSION}
+             */
             // Step 3:  Open an input stream from the url.
             is = url.openStream(); //IO exception
 
