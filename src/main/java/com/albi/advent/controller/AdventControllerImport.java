@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
 import java.util.List;
 
 import static com.albi.advent.controller.AdventControllerImport.ADVENT_BASE_URL;
@@ -24,11 +23,11 @@ public class AdventControllerImport {
     public static final String ADVENT_BASE_URL = "/advent";
 
     @GetMapping("{year}/{day}")
-    public ResponseEntity<List<String>> getAventInputs(
+    public ResponseEntity<String> getAventInputs(
             @PathVariable Integer year,
             @PathVariable Integer day
-    ) throws IOException {
-        List<String> listImported = adventServiceImport.getImputBasedOnYearAndDay(year, day);
+    ) {
+        String listImported = adventServiceImport.getImputBasedOnYearAndDay(year, day);
         return ResponseEntity.ok().body(listImported);
 
     }
